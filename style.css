@@ -24,7 +24,8 @@ header {
     
     box-shadow:3px 3PX 3PX 3PX rgb(255, 255, 255) ;
     align-items: center;
-    position:fixed;
+    position:inherit;
+    margin-bottom: 50PX;
     
 }
 .navbar{ gap:30px;
@@ -57,3 +58,47 @@ header {
     border: 2px rgb(255, 255, 255)solid;
     box-shadow: 7px 7px black;
 }
+main{
+    display: flex;
+    justify-content: space-around;
+}
+.descriptiontext{
+    width: 30%;
+    display: flex;
+    flex-direction:column;
+    align-content: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+}
+.descriptiontext h2{
+    font-size: 50px;}
+.descriptiontext p{
+    font-size: 30px;
+    font-weight: bold;
+    ;
+    }
+.imageh3{display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    font-size: 30px;
+}
+.imageh3 img{
+height: 150px;
+width: 200px;
+cursor:pointer;
+
+}
+
+.imagemain{
+    size: cover;
+    display: flex;
+    justify-content: flex-end;
+    border: 5pX solid white;
+    border-radius: 20px;
+}
+.imagemain img{
+   border-radius: 10px;
+}
+  
