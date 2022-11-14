@@ -16,10 +16,15 @@ body{
     background-size: cover;
     background-repeat: repeat;
     background: rgb(52,43,191);
-background: linear-gradient(90deg, rgba(52,43,191,1) 0%, rgba(0,212,255,1) 92%, rgba(0,212,255,1) 100%);
+    background: #F0F2F0;  
+    background: -webkit-linear-gradient(to right, #000C40, #F0F2F0); 
+    background: linear-gradient(to right, #000C40, #F0F2F0);
+    
 }
 header {
-    background: linear-gradient(90deg, rgba(52,43,191,1) 0%, rgba(0,212,255,1) 92%, rgba(0,212,255,1) 100%);
+    background: #F0F2F0;  
+    background: -webkit-linear-gradient(to right, #000C40, #F0F2F0);  
+    background: linear-gradient(to right, #000C40, #F0F2F0);    
     display:flex;
     position: sticky;
     top:0;
@@ -160,16 +165,29 @@ header {
     margin-top: 100px;
 }
 @media (max-width:1080px){
+    .imagemain img{
+        width: 70%;
+    }
     .hero{
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         margin-top: 150px;
     }
     .descriptiontext{
         width: 90%;
 
     }
-
+    .imagemain{
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .buttonshero{
+        align-items: center;
+        justify-content: ce
+    }
+    
 }
 @media (max-width:700px){
    
@@ -186,6 +204,9 @@ header {
     .navbarmedia li{
         display: none;
     }
+    .buttonshero button{
+        margin: 0 20px;
+    }
 }
 @media (max-width:500px){
 
@@ -198,6 +219,7 @@ header {
     align-items: center;
 
 }
+
 }
 @media (max-width:500px){
     .imagemain img{
@@ -208,17 +230,20 @@ header {
     height: 100px;
 }
 .buttonshero{
+    flex-wrap: wrap;
     align-items: center;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-content: center;
 }
 .h2masimagen h2{
     font-size: 30px;
 }
 .descriptiontext p{
     font-size: 15px;
+    align-items: center;
+    justify-content: center;
 }
-}
-    
-    
+.buttonshero button{
+    margin: 0;
+}}
