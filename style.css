@@ -8,36 +8,44 @@
     font-family: 'Fjalla One', sans-serif;
     font-style: bold;
     
+    
 
 }
 body{
     background: rgb(52,43,191);
-    background: linear-gradient(90deg, rgba(52,43,191,1) 0%, rgba(0,212,255,1) 92%, rgba(0,212,255,1) 100%);
+    background-size: cover;
+    background-repeat: repeat;
+    background: rgb(52,43,191);
+background: linear-gradient(90deg, rgba(52,43,191,1) 0%, rgba(0,212,255,1) 92%, rgba(0,212,255,1) 100%);
 }
 header {
-    background: rgb(52,43,191);
     background: linear-gradient(90deg, rgba(52,43,191,1) 0%, rgba(0,212,255,1) 92%, rgba(0,212,255,1) 100%);
     display:flex;
-    width: 100%;
+    position: sticky;
+    top:0;
     justify-content: space-between;
     height: 100px;
-    
-    box-shadow:3px 3PX 3PX 3PX rgb(255, 255, 255) ;
+    box-shadow:3px 3px 3px rgb(255, 255, 255) ;
     align-items: center;
-    position:inherit;
-    margin-bottom: 50PX;
+    margin-bottom: 100PX;
+    
     
 }
-.navbar{ gap:30px;
+.navbar{ 
+    gap:30px; 
+}
+.mediaquerihome a{
+    display: none;
     
 }
-.navbar ul  { 
+
+.navbar ul .navbarmedia{ 
     align-items: center;
     justify-content: center;
     display: flex;
     gap: 70px;
     margin-right: 30px;
-    
+    flex-wrap: wrap;
 }
 .logo{
      height: 100%;
@@ -47,8 +55,9 @@ header {
 .navbar a {
         padding:10px;
         font-size: 20px;
+        
     }
-.navbar a:hover{
+.navbar a:hover, .mediaquerihome a:hover {
     color: rgb(255, 255, 255);
     background-color: black;
     text-decoration:underline;
@@ -58,47 +67,158 @@ header {
     border: 2px rgb(255, 255, 255)solid;
     box-shadow: 7px 7px black;
 }
-main{
+.hero{
     display: flex;
     justify-content: space-around;
+    height: 700px ;
+    
 }
 .descriptiontext{
-    width: 30%;
     display: flex;
+    width: 40%;
     flex-direction:column;
     align-content: center;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
     text-align: center;
+   
 }
-.descriptiontext h2{
-    font-size: 50px;}
+.h2masimagen img{
+    width: 200px;  
+    height: 200px;
+    cursor: pointer;
+    
+}
+.h2masimagen{
+    display: flex;
+    align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.h2masimagen h2{
+    align-items: center;
+    display: flex;
+    font-size: 50px;
+    gap: 50px
+
+}
+
 .descriptiontext p{
     font-size: 30px;
     font-weight: bold;
-    ;
     }
-.imageh3{display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    font-size: 30px;
-}
-.imageh3 img{
-height: 150px;
-width: 200px;
-cursor:pointer;
-
-}
-
+.descriptiontext p img{
+      height: 30px;
+      width: 30px;
+      margin: 5px;
+      cursor: pointer;
+        
+   }
 .imagemain{
-    size: cover;
     display: flex;
     justify-content: flex-end;
-    border: 5pX solid white;
-    border-radius: 20px;
+  
+
 }
 .imagemain img{
    border-radius: 10px;
+   border: 5pX solid white;
+   border-radius: 20px;
+
 }
-  
+.buttonshero button:hover {
+    background-color: red;
+    gap: 50px;
+}
+.buttonshero button{
+   margin-right: 30px;
+    gap: 50px;
+}
+#projects{ 
+    color: red;
+    padding: 10px 30px;
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 30px ;
+    font-size: 20px;
+}
+#projects a {
+    color:white
+}
+#contact {
+    padding: 10px 30px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 30px ;
+    font-size: 20px;
+    cursor: pointer;
+    
+}
+.textocarrera{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+@media (max-width:1080px){
+    .hero{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 150px;
+    }
+    .descriptiontext{
+        width: 90%;
+
+    }
+
+}
+@media (max-width:700px){
+   
+    .hero{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 150px;
+    }
+    .mediaquerihome a{
+        display: flex;
+        padding: 10px;
+        margin-right: 20px;
+    }
+    .navbarmedia li{
+        display: none;
+    }
+}
+@media (max-width:500px){
+
+    .imagemain{
+        justify-content: center; 
+    }
+.imagemain img{
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+
+}
+}
+@media (max-width:500px){
+    .imagemain img{
+        width: 40%;
+    }
+.h2masimagen h2 img{
+    width: 100px;
+    height: 100px;
+}
+.buttonshero{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.h2masimagen h2{
+    font-size: 30px;
+}
+.descriptiontext p{
+    font-size: 15px;
+}
+}
+    
+    
